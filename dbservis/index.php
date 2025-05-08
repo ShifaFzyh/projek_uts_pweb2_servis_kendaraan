@@ -11,6 +11,9 @@ $file = $_GET['url'];
 if ($file === 'layanan') {
     require_once 'views/layanan.php';
     exit();
+} elseif ($file === 'montir') {
+    require_once 'views/montir.php';
+    exit();
 }
 
 $title = strtoupper($file);
