@@ -191,7 +191,7 @@
                     <a href="?url=pasien" class="nav-link <?php if($file == 'pasien') echo 'active' ?>">
                         <i class="nav-icon fas fa-user"></i>
                         <p>
-                           Pasien
+                           Montir
                         </p>
                     </a>
                 </li>
@@ -199,7 +199,7 @@
                     <a href="?url=paramedik" class="nav-link <?php if($file == 'paramedik') echo 'active' ?>">
                         <i class="nav-icon fas fa-stethoscope"></i>
                         <p>
-                           Paramedik
+                           Layanan
                         </p>
                     </a>
                 </li>
@@ -207,7 +207,7 @@
                     <a href="?url=periksa" class="nav-link <?php if($file == 'periksa') echo 'active' ?>">
                         <i class="nav-icon fas fa-hospital-user"></i>
                         <p>
-                           Periksa
+                           Detail Layanan
                         </p>
                     </a>
                 </li>
