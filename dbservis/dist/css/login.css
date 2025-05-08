@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login GoMontir</title>
-    <link rel="shortcut icon" type="image/png" href="../assets/images/logos/logo-login.png" />
-
-</head>
-<body>
-    <style>
-        
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
         
 /* Reseting */
 * {
@@ -112,28 +100,3 @@ body {
         padding: 40px 15px 15px 15px;
     }
 }
-</style>
-    <div class="wrapper">
-        <div class="logo">
-            <img src="../assets/images/logos/logo-login.png" alt="">
-        </div>
-        <div class="text-center mt-4 name">
-            GoMontir
-        </div>
-        <form class="p-3 mt-3">
-            <div class="form-field d-flex align-items-center">
-                <span class="far fa-user"></span>
-                <input type="text" name="userName" id="userName" placeholder="Username">
-            </div>
-            <div class="form-field d-flex align-items-center">
-                <span class="fas fa-key"></span>
-                <input type="password" name="password" id="pwd" placeholder="Password">
-            </div>
-            <button class="btn mt-3">Login</button>
-        </form>
-        <div class="text-center fs-6">
-            <a href="#">Forget password?</a> or <a href="#">Sign up</a>
-        </div>
-    </div>
-</body>
-</html>
