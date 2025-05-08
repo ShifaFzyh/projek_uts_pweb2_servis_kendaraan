@@ -9,10 +9,9 @@ $username = "root";
 $password = ""; 
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password, [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
-    ]);
+    $pdo = new PDO('mysql:host=localhost;dbname=servis_kendaraan', 'root', '');
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    die("Koneksi gagal: " . $e->getMessage());
+    die("Koneksi database gagal: " . $e->getMessage());
 }
+?>
