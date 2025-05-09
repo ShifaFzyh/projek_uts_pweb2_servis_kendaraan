@@ -1,17 +1,13 @@
 <?php
-
-/**
- * File ini akan digunakan untuk memanggil database
- */
 $host = "localhost";
-$dbname = "servis_kendaraan";
-$username = "root";
-$password = ""; 
+$dbname = "servis_kendaraan"; // Pastikan ini nama DB kamu
+$user = "root";
+$pass = "";
 
 try {
-    $pdo = new PDO('mysql:host=localhost;dbname=servis_kendaraan', 'root', '');
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Koneksi database gagal: " . $e->getMessage());
+} catch(PDOException $e) {
+    die("Koneksi gagal: " . $e->getMessage());
 }
 ?>

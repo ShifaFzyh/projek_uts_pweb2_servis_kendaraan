@@ -14,6 +14,12 @@ if ($file === 'layanan') {
 } elseif ($file === 'montir') {
     require_once 'views/montir.php';
     exit();
+} elseif ($file === 'login') {
+    require_once 'login.php';
+    exit();
+} elseif ($file === 'landing') {
+    require_once 'landing.php';
+    exit();
 }
 
 $title = strtoupper($file);
