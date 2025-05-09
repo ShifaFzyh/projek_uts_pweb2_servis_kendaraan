@@ -200,7 +200,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
+                    <a href="?url=login" class="nav-link <?php if($file == 'login') echo 'active' ?>">
+=======
                     <a href="?url=dbservis\templates\examples\login.html" class="nav-link <?php if($file == 'dbservis\templates\examples\login.html') echo 'active' ?>">
+>>>>>>> 40c4eabdec7d5d645f404c5b5b48bd85b22d6eec
                         <i class="nav-icon fas fa-user"></i>
                         <p>
                            Login
@@ -216,6 +220,15 @@
                     </a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
+                    <a href="?url=layanan" class="nav-link <?php if($file == 'layanan') echo 'active' ?>">
+                        <i class="nav-icon fas fa-stethoscope"></i>
+                        <p>
+                           Layanan
+                        </p>
+                    </a>
+                </li>
+=======
     <a href="?url=layanan" class="nav-link <?php if($file == 'layanan') echo 'active' ?>">
         <i class="nav-icon fas fa-stethoscope"></i>
         <p>
@@ -223,6 +236,7 @@
         </p>
     </a>
 </li>
+>>>>>>> 40c4eabdec7d5d645f404c5b5b48bd85b22d6eec
                 <li class="nav-item">
                     <a href="?url=periksa" class="nav-link <?php if($file == 'periksa') echo 'active' ?>">
                         <i class="nav-icon fas fa-hospital-user"></i>
