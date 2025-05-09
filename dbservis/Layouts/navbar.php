@@ -200,7 +200,6 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="?url=login" class="nav-link <?php if($file == 'login') echo 'active' ?>">
                     <a href="?url=dbservis\templates\examples\login.html" class="nav-link <?php if($file == 'dbservis\templates\examples\login.html') echo 'active' ?>">
                         <i class="nav-icon fas fa-user"></i>
                         <p>
