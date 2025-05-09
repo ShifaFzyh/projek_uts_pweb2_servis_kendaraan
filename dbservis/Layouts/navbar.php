@@ -200,20 +200,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="?url=login" class="nav-link <?php if($file == 'login') echo 'active' ?>">
-                    <a href="?url=dbservis\templates\examples\login.html" class="nav-link <?php if($file == 'dbservis\templates\examples\login.html') echo 'active' ?>">
-                        <i class="nav-icon fas fa-user"></i>
-                        <p>
-                           Login
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a href="?url=montir" class="nav-link <?php if($file == 'montir') echo 'active' ?>">
-                    <a href="?url=montir
-                    " class="nav-link <?php if($file == 'montir
-                    ') echo 'active' ?>">
-
                         <i class="nav-icon fas fa-user"></i>
                         <p>
                            Montir
@@ -229,7 +216,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="?url=periksa" class="nav-link <?php if($file == 'periksa') echo 'active' ?>">
+                    <a href="?url=DetailLayanan" class="nav-link <?php if($file == 'detail layanan') echo 'active' ?>">
                         <i class="nav-icon fas fa-hospital-user"></i>
                         <p>
                            Detail Layanan

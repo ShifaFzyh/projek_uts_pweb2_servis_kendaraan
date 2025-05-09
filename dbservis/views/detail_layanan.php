@@ -13,7 +13,7 @@
                             <input type="date" class="form-control" id="tanggal" name="tanggal" required>
                         </div>
                         <div class="mb-3">
-                            <label for="nama_pasien" class="form-label">Nama Pasien</label>
+                            <label for="nama_pasien" class="form-label">Nama</label>
                             <select name="nama_pasien" id="nama_pasien" class="form-select" required>
                                 <option value="" hidden>-- Pilih Pasien --</option>
                             <?php

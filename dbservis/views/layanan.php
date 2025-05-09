@@ -1,5 +1,6 @@
 <?php
-include_once(__DIR__ . '/../Layouts/navbar.php'); ?>
+include_once(__DIR__ . '/../Layouts/navbar.php'); 
+include_once(__DIR__ . '/../Controllers/Layanan.php'); ?>
 
 <link rel="stylesheet" href="../assets/adminlte/css/adminlte.min.css">
 <script src="../assets/adminlte/js/adminlte.min.js"></script>
