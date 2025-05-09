@@ -1,55 +1,91 @@
+<?php
+require_once 'Controllers/Layanan.php';
+require_once 'Controllers/Montir.php';
+require_once 'Controllers/DetailLayanan.php';
 
+if(isset($_POST['type'])) {
+    $type = $_POST['type'];
+    $detailLayanan = new DetailLayanan($pdo);
+    if ($type == 'add') {
+        $pekerjaan = $_POST['pekerjaan'];
+        $biaya = $_POST['biaya'];
+        $layanan_id = $_POST['layanan_id'];
+        $pj_montir_id = $_POST['pj_montir_id'];
+
+        if ($detailLayanan->create($pekerjaan, $biaya, $layanan_id, $pj_montir_id)) {
+            echo "<script>alert('Data berhasil ditambahkan!');</script>";
+        } else {
+            echo "<script>alert('Gagal menambahkan data!');</script>";
+        }
+    } elseif ($type == 'update') {
+        $id = $_POST['id'];
+        $pekerjaan = $_POST['pekerjaan'];
+        $biaya = $_POST['biaya'];
+        $layanan_id = $_POST['layanan_id'];
+        $pj_montir_id = $_POST['pj_montir_id'];
+
+        if ($detailLayanan->update($id, ['pekerjaan' => $pekerjaan, 'biaya' => $biaya, 'layanan_id' => $layanan_id, 'pj_montir_id' => $pj_montir_id])) {
+            echo "<script>alert('Data berhasil diperbarui!');</script>";
+        } else {
+            echo "<script>alert('Gagal memperbarui data!');</script>";
+        }
+    } elseif ($type == 'delete') {
+        $id = $_POST['id'];
+
+        if ($detailLayanan->delete($id)) {
+            echo "<script>alert('Data berhasil dihapus!');</script>";
+        } else {
+            echo "<script>alert('Gagal menghapus data!');</script>";
+        }
+    }
+}
+
+?>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Tambah Data Periksa</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Data Service</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form method="post" action="">
+                    <input type="hidden" name="type" value="add">
                     <div class="mb-3">
-                        <label for="tanggal" class="form-label">Tanggal</label>
-                        <input type="date" class="form-control" id="tanggal" name="tanggal" required>
+                        <label for="pekerjaan" class="form-label">Pekerjaan</label>
+                        <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" required>
                     </div>
                     <div class="mb-3">
-                        <label for="nama_pasien" class="form-label">Nama</label>
-                        <select name="nama_pasien" id="nama_pasien" class="form-select" required>
-                            <option value="" hidden>-- Pilih Pasien --</option>
-                        
+                        <label for="biaya" class="form-label">Biaya</label>
+                        <input type="number" class="form-control" id="biaya" name="biaya" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="layanan_id" class="form-label">Layanan</label>
+                        <select name="layanan_id" id="layanan_id" class="form-select" required>
+                            <option value="" hidden>-- Pilih Layanan --</option>
+                            <?php
+                            $no = 1;
+                            foreach ($layanan->index() as $item):
+                            ?>
+                                <option value="<?php echo $item['id'] ?>"><?php echo $item['nama'] ?></option>
+                            <?php endforeach ?>
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label for="nama_paramedik" class="form-label">Nama Paramedik</label>
-                        <select name="nama_paramedik" id="nama_paramedik" class="form-select" required>
-                            <option value="" hidden>-- Pilih Paramedik --</option>
-                        
+                        <label for="pj_montir_id" class="form-label">PJ Montir</label>
+                        <select name="pj_montir_id" id="pj_montir_id" class="form-select" required>
+                            <option value="" hidden>-- Pilih Montir --</option>
+                            <?php
+                            $no = 1;
+                            foreach ($montir->index() as $item):
+                            ?>
+                                <option value="<?php echo $item['id'] ?>"><?php echo $item['nama'] ?></option>
+                            <?php endforeach ?>
                         </select>
                     </div>
+
                     <div class="mb-3">
-                        <label for="keterangan" class="form-label">Keterangan</label>
-                        <textarea class="form-control" id="keterangan" name="keterangan" required></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <div class="col">
-                            <label for="berat" class="form-label">Berat Badan</label>
-                            <input type="text" class="form-control" id="berat" name="berat" required>
-                        </div>
-                        <div class="col">
-                            <label for="tinggi" class="form-label">Tinggi Badan</label>
-                            <input type="text" class="form-control" id="tinggi" name="tinggi" required>
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <div class="col">
-                            <label for="sistolik" class="form-label">Sistolik</label>
-                            <input type="text" class="form-control" id="sistolik" name="sistolik" required>
-                        </div>
-                        <div class="col">
-                            <label for="diastolik" class="form-label">Diastolik</label>
-                            <input type="text" class="form-control" id="diastolik" name="diastolik" required>
-                        </div>
                     </div>
                     <input type="hidden" name="type" value="add">
                     <button type="submit" class="btn btn-primary">Simpan</button>
@@ -63,32 +99,31 @@
     <div class="card">
         <div class="card-body">
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Tambah Data Periksa
+                Tambah Data Pelayanan
             </button>
-            
+
             <table id="example1" class="table table-bordered">
                 <thead>
                     <tr class="text-center">
-                        <th class="pe-1" style="width: 50px;">No</th>
-                        <th class="pe-1">Tanggal</th>
-                        <th class="pe-1">Pasien</th>
-                        <th class="pe-1">Paramedik</th>
-                        <th class="pe-1">Keterangan</th>
+                        <th class="pe-1" style="width: 50px;">ID</th>
+                        <th class="pe-1">Pekerjaan</th>
+                        <th class="pe-1">Biaya</th>
+                        <th class="pe-1">Layanan</th>
+                        <th class="pe-1">PJ Montir</th>
                         <th class="pe-1" colspan="3">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    
-                    $nomer=1;
-                    foreach([] as $item){
+                    $nomer = 1;
+                    foreach ($detailLayanan->index() as $item) {
                     ?>
                         <tr>
                             <td class="text-center"><?= $nomer++ ?></td>
-                            <td><?= htmlspecialchars($item['tanggal']); ?></td>
-                            <td><?= htmlspecialchars($item['nama_pasien']); ?></td>
-                            <td><?= htmlspecialchars($item['nama_paramedik']); ?></td>
-                            <td><?= htmlspecialchars($item['keterangan']); ?></td>
+                            <td><?= htmlspecialchars($item['pekerjaan']); ?></td>
+                            <td><?= htmlspecialchars($item['biaya']); ?></td>
+                            <td><?= htmlspecialchars($item['layanan']); ?></td>
+                            <td><?= htmlspecialchars($item['montir']); ?></td>
                             <td class="text-center">
                                 <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#modalInfo<?= $item['id']; ?>">
                                     Info
@@ -111,18 +146,15 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="modalInfo<?= $item['id'] ?>Label">Detail Periksa: <?= htmlspecialchars($item['nama_pasien']); ?></h5>
+                                        <h5 class="modal-title" id="modalInfo<?= $item['id'] ?>Label">Detail Service: <?= htmlspecialchars($item['pekerjaan']); ?></h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <ul class="list-group">
-                                            <li class="list-group-item"><strong>Tanggal:</strong> <span class="float-end"><?= htmlspecialchars($item['tanggal']); ?></span></li>
-                                            <li class="list-group-item"><strong>Pasien:</strong> <span class="float-end"><?= htmlspecialchars($item['nama_pasien']); ?></span></li>
-                                            <li class="list-group-item"><strong>Paramedik:</strong> <span class="float-end"><?= htmlspecialchars($item['nama_paramedik']); ?></span></li>
-                                            <li class="list-group-item"><strong>Keterangan:</strong> <span class="float-end"><?= htmlspecialchars($item['keterangan']); ?></span></li>
-                                            <li class="list-group-item"><strong>Berat Badan:</strong> <span class="float-end"><?= htmlspecialchars($item['berat']); ?></span></li>
-                                            <li class="list-group-item"><strong>Tinggi Badan:</strong> <span class="float-end"><?= htmlspecialchars($item['tinggi']); ?></span></li>
-                                            <li class="list-group-item"><strong>Tensi:</strong> <span class="float-end"><?= htmlspecialchars($item['tensi']); ?></span></li>
+                                            <li class="list-group-item"><strong>Pekerjaan:</strong> <span class="float-end"><?= htmlspecialchars($item['pekerjaan']); ?></span></li>
+                                            <li class="list-group-item"><strong>Biaya:</strong> <span class="float-end"><?= htmlspecialchars($item['biaya']); ?></span></li>
+                                            <li class="list-group-item"><strong>Layanan:</strong> <span class="float-end"><?= htmlspecialchars($item['layanan']); ?></span></li>
+                                            <li class="list-group-item"><strong>PJ Montir:</strong> <span class="float-end"><?= htmlspecialchars($item['montir']); ?></span></li>
                                         </ul>
                                     </div>
                                     <div class="modal-footer">
@@ -138,7 +170,7 @@
                                 <div class="modal-content">
                                     <form method="POST" action="">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="modalEdit<?= $item['id'] ?>Label">Edit Data Periksa</h5>
+                                            <h5 class="modal-title" id="modalEdit<?= $item['id'] ?>Label">Edit Data Pelayanan</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
                                         </div>
                                         <div class="modal-body">
@@ -146,60 +178,37 @@
                                             <input type="hidden" name="id" value="<?= htmlspecialchars($item['id']) ?>">
 
                                             <div class="mb-3">
-                                                <label for="tanggal" class="form-label">Tanggal</label>
-                                                <input type="date" class="form-control" name="tanggal" value="<?= htmlspecialchars($item['tanggal']) ?>" required>
+                                                <label for="pekerjaan" class="form-label">Pekerjaan</label>
+                                                <input type="text" class="form-control" name="pekerjaan" value="<?= htmlspecialchars($item['pekerjaan']) ?>" required>
                                             </div>
                                             <div class="mb-3">
-                                                <label for="nama_pasien" class="form-label">Nama Pasien</label>
-                                                <select name="nama_pasien" id="nama_pasien" class="form-select" required>
-                                                    <?php
-                                                    $pasiens = $pasien->index();
-                                                    foreach ($pasiens as $p) {
-                                                        echo '<option value="' . htmlspecialchars($p['id']) . '"' . ($item['pasien_id'] == $p['id'] ? ' selected' : '') . '>' . htmlspecialchars($p['nama']) . '</option>';
-                                                    }
+                                                <label for="biaya" class="form-label">Biaya</label>
+                                                <input type="number" class="form-control" name="biaya" value="<?= htmlspecialchars($item['biaya']) ?>" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="layanan_id" class="form-label">Layanan</label>
+                                                <select name="layanan_id" id="layanan_id" class="form-select" required>
+                                                    <?php 
+                                                    foreach($layanan->index() as $layananItem):  
                                                     ?>
+                                                    <option value="<?= htmlspecialchars($layananItem['id']) ?>" <?= ($item['layanan_id'] == $layananItem['id']) ? 'selected' : '' ?>><?= htmlspecialchars($layananItem['nama']) ?></option>
+                                                    <?php endforeach ?>
                                                 </select>
                                             </div>
                                             <div class="mb-3">
-                                                <label for="nama_paramedik" class="form-label">Nama Paramedik</label>
-                                                <select name="nama_paramedik" id="nama_paramedik" class="form-select" required>
-                                                    <?php
-                                                    $paramediks = $paramedik->index();
-                                                    foreach ($paramediks as $p) {
-                                                        echo '<option value="' . htmlspecialchars($p['id']) . '"' . ($item['paramedik_id'] == $p['id'] ? ' selected' : '') . '>' . htmlspecialchars($p['nama']) . '</option>';
-                                                    }
+                                                <label for="pj_montir_id" class="form-label">PJ Montir</label>
+                                                <select name="pj_montir_id" id="pj_montir_id" class="form-select" required>
+                                                    <?php 
+                                                    foreach($montir->index() as $montirItem):  
                                                     ?>
+                                                    <option value="<?= htmlspecialchars($montirItem['id']) ?>" <?= ($item['pj_montir_id'] == $montirItem['id']) ? 'selected' : '' ?>><?= htmlspecialchars($montirItem['nama']) ?></option>
+                                                    <?php endforeach ?>
                                                 </select>
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="keterangan" class="form-label">Keterangan</label>
-                                                <textarea class="form-control" name="keterangan" required><?= htmlspecialchars($item['keterangan']) ?></textarea>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
                                             </div>
-                                            <div class="mb-3 row">
-                                                <div class="col">
-                                                    <label for="berat" class="form-label">Berat Badan</label>
-                                                    <input type="text" class="form-control" name="berat" value="<?= htmlspecialchars($item['berat']) ?>" required>
-                                                </div>
-                                                <div class="col">
-                                                    <label for="tinggi" class="form-label">Tinggi Badan</label>
-                                                    <input type="text" class="form-control" name="tinggi" value="<?= htmlspecialchars($item['tinggi']) ?>" required>
-                                                </div>
-                                            </div>
-                                            <div class="mb-3 row">
-                                                <div class="col">
-                                                    <label for="sistolik" class="form-label">Sistolik</label>
-                                                    <input type="text" class="form-control" name="sistolik" value="<?= explode('/', htmlspecialchars($item['tensi']))[0] ?>" required>
-                                                </div>
-                                                <div class="col">
-                                                    <label for="diastolik" class="form-label">Diastolik</label>
-                                                    <input type="text" class="form-control" name="diastolik" value="<?= explode('/', htmlspecialchars($item['tensi']))[1] ?>" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                                        </div>
                                     </form>
                                 </div>
                             </div>
@@ -214,7 +223,7 @@
                                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        Yakin ingin menghapus data periksa untuk <strong><?= htmlspecialchars($item['nama_pasien']); ?></strong>?
+                                        Yakin ingin menghapus data untuk <strong><?= htmlspecialchars($item['pekerjaan']); ?></strong>?
                                     </div>
                                     <div class="modal-footer">
                                         <form method="post">
@@ -229,33 +238,6 @@
                         </div>
 
                     <?php }
-                    if(isset($_POST['type'])){
-                        if($_POST['type'] == 'delete'){
-                            $periksa->delete($_POST['id']);
-                            echo "<script>alert('Data berhasil dihapus.');</script>";
-                            echo "<script>window.location.href = '?url=periksa';</script>";
-                        } elseif($_POST['type'] == 'add'){
-                            $_POST['tensi'] = $_POST['sistolik'] . '/' . $_POST['diastolik'];
-                            $periksa->create($_POST['nama_pasien'], $_POST['nama_paramedik'], $_POST['berat'], $_POST['tinggi'], $_POST['tensi'], $_POST['tanggal'], $_POST['keterangan']);
-                            echo "<script>alert('Data berhasil ditambahkan.');</script>";
-                            echo "<script>window.location.href = '?url=periksa';</script>";
-                        } elseif ($_POST['type'] == 'update') {
-                            $id = $_POST['id'];
-                            $data = [
-                                'tanggal' => $_POST['tanggal'],
-                                'pasien_id' => $_POST['nama_pasien'],
-                                'berat' => $_POST['berat'],
-                                'tinggi' => $_POST['tinggi'],
-                                'tensi' => $_POST['sistolik'] . '/' . $_POST['diastolik'],
-                                'tanggal' => $_POST['tanggal'],
-                                'paramedik_id' => $_POST['nama_paramedik'],
-                                'keterangan' => $_POST['keterangan']
-                            ];
-                            $periksa->update($id, $data);
-                            echo "<script>alert('Data berhasil diperbarui.');</script>";
-                            echo "<script>window.location.href = '?url=periksa';</script>";
-                        }
-                    }
                     ?>
                 </tbody>
             </table>
