@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['admin_username'] = $validUsername;
 
         // Perbaiki jalur ke layanan.php
-        header('Location: ?url=layanan');
+        header('Location: ?url=home');
         exit;
     } else {
         $error = "Username atau password salah!";

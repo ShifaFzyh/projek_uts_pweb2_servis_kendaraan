@@ -1,79 +1,71 @@
-<div class="container">
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Tambah Data Periksa</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form method="post" action="">
-                        <div class="mb-3">
-                            <label for="tanggal" class="form-label">Tanggal</label>
-                            <input type="date" class="form-control" id="tanggal" name="tanggal" required>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Data Periksa</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="">
+                    <div class="mb-3">
+                        <label for="tanggal" class="form-label">Tanggal</label>
+                        <input type="date" class="form-control" id="tanggal" name="tanggal" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nama_pasien" class="form-label">Nama</label>
+                        <select name="nama_pasien" id="nama_pasien" class="form-select" required>
+                            <option value="" hidden>-- Pilih Pasien --</option>
+                        
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nama_paramedik" class="form-label">Nama Paramedik</label>
+                        <select name="nama_paramedik" id="nama_paramedik" class="form-select" required>
+                            <option value="" hidden>-- Pilih Paramedik --</option>
+                        
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="keterangan" class="form-label">Keterangan</label>
+                        <textarea class="form-control" id="keterangan" name="keterangan" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <div class="col">
+                            <label for="berat" class="form-label">Berat Badan</label>
+                            <input type="text" class="form-control" id="berat" name="berat" required>
                         </div>
-                        <div class="mb-3">
-                            <label for="nama_pasien" class="form-label">Nama</label>
-                            <select name="nama_pasien" id="nama_pasien" class="form-select" required>
-                                <option value="" hidden>-- Pilih Pasien --</option>
-                            <?php
-                                require ('Controllers/Pasien.php');
-                                $pasiens = $pasien->index();
-                                foreach ($pasiens as $p) {
-                                    echo '<option value="' . htmlspecialchars($p['id']) . '">' . htmlspecialchars($p['nama']) . '</option>';
-                                }
-                            ?>
-                            </select>
+                        <div class="col">
+                            <label for="tinggi" class="form-label">Tinggi Badan</label>
+                            <input type="text" class="form-control" id="tinggi" name="tinggi" required>
                         </div>
-                        <div class="mb-3">
-                            <label for="nama_paramedik" class="form-label">Nama Paramedik</label>
-                            <select name="nama_paramedik" id="nama_paramedik" class="form-select" required>
-                                <option value="" hidden>-- Pilih Paramedik --</option>
-                            <?php
-                                require ('Controllers/Paramedik.php');
-                                $paramediks = $paramedik->index();
-                                foreach ($paramediks as $p) {
-                                    echo '<option value="' . htmlspecialchars($p['id']) . '">' . htmlspecialchars($p['nama']) . '</option>';
-                                }
-                            ?>
-                            </select>
+                    </div>
+                    <div class="mb-3 row">
+                        <div class="col">
+                            <label for="sistolik" class="form-label">Sistolik</label>
+                            <input type="text" class="form-control" id="sistolik" name="sistolik" required>
                         </div>
-                        <div class="mb-3">
-                            <label for="keterangan" class="form-label">Keterangan</label>
-                            <textarea class="form-control" id="keterangan" name="keterangan" required></textarea>
+                        <div class="col">
+                            <label for="diastolik" class="form-label">Diastolik</label>
+                            <input type="text" class="form-control" id="diastolik" name="diastolik" required>
                         </div>
-                        <div class="mb-3">
-                            <div class="col">
-                                <label for="berat" class="form-label">Berat Badan</label>
-                                <input type="text" class="form-control" id="berat" name="berat" required>
-                            </div>
-                            <div class="col">
-                                <label for="tinggi" class="form-label">Tinggi Badan</label>
-                                <input type="text" class="form-control" id="tinggi" name="tinggi" required>
-                            </div>
-                        </div>
-                        <div class="mb-3 row">
-                            <div class="col">
-                                <label for="sistolik" class="form-label">Sistolik</label>
-                                <input type="text" class="form-control" id="sistolik" name="sistolik" required>
-                            </div>
-                            <div class="col">
-                                <label for="diastolik" class="form-label">Diastolik</label>
-                                <input type="text" class="form-control" id="diastolik" name="diastolik" required>
-                            </div>
-                        </div>
-                        <input type="hidden" name="type" value="add">
-                        <button type="submit" class="btn btn-primary">Simpan</button>
-                    </form>
-                </div>
+                    </div>
+                    <input type="hidden" name="type" value="add">
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </form>
             </div>
         </div>
     </div>
+</div>
+
+<div class="container">
     <div class="card">
         <div class="card-body">
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Tambah Data Periksa
             </button>
+            
             <table id="example1" class="table table-bordered">
                 <thead>
                     <tr class="text-center">
@@ -87,10 +79,9 @@
                 </thead>
                 <tbody>
                     <?php
-                    require ('Controllers/Periksa.php');
-                    $row = $periksa->index();
+                    
                     $nomer=1;
-                    foreach($row as $item){
+                    foreach([] as $item){
                     ?>
                         <tr>
                             <td class="text-center"><?= $nomer++ ?></td>

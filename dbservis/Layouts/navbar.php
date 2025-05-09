@@ -216,7 +216,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="?url=DetailLayanan" class="nav-link <?php if($file == 'detail layanan') echo 'active' ?>">
+                    <a href="?url=detail_layanan" class="nav-link <?php if($file == 'detail_layanan') echo 'active' ?>">
                         <i class="nav-icon fas fa-hospital-user"></i>
                         <p>
                            Detail Layanan
