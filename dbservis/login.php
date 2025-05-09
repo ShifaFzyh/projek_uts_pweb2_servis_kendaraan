@@ -140,7 +140,7 @@ body {
     }
 }
 </style>
-    <div class="wrapper">
+    <div class="wrapper" method ="POST">
         <div class="logo">
             <img src="dist/img/login.png" alt="">
         </div>
