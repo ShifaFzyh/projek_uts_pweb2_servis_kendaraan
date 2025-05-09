@@ -1,5 +1,5 @@
 <?php
-require_once 'Controller/Montir.php';
+require_once 'Controllers/Montir.php';
 $data = $montir->index();
 ?>
 <div class="container">
