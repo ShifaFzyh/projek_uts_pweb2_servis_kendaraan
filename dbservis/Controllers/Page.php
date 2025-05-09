@@ -20,6 +20,11 @@ class Page
     {
         $file = $this->file;
         $title = $this->title;
-        include_once('Layouts/app.php');
+
+        if ($file === 'layanan') {
+            require_once 'views/layanan.php';
+        } else {
+            include_once('Layouts/app.php');
+        }
     }
 }
