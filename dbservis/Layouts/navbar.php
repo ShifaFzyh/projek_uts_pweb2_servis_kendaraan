@@ -200,6 +200,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
+<<<<<<< Updated upstream
 <<<<<<< HEAD
                     <a href="?url=login" class="nav-link <?php if($file == 'login') echo 'active' ?>">
 =======
@@ -213,6 +214,11 @@
                 </li>
                 <li class="nav-item">
                     <a href="?url=montir" class="nav-link <?php if($file == 'montir') echo 'active' ?>">
+=======
+                    <a href="?url=montir
+                    " class="nav-link <?php if($file == 'montir
+                    ') echo 'active' ?>">
+>>>>>>> Stashed changes
                         <i class="nav-icon fas fa-user"></i>
                         <p>
                            Montir

@@ -1,5 +1,8 @@
 <?php
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 require_once 'Controllers/Montir.php';
 $data = $montir->index();
 ?>
