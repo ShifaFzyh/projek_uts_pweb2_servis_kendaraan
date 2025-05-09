@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
@@ -14,6 +15,8 @@ $data = $montir->index();
                     <h5 class="modal-title" id="exampleModalLabel">Tambah Data Montir</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 =======
+=======
+>>>>>>> b6ae2a45bd7df156d9c1ce7da7c84924a1000376
 require_once __DIR__ . '/../Controllers/Montir.php';
 require_once __DIR__ . '/../Controllers/KategoriMontir.php';
 
@@ -21,7 +24,7 @@ require_once __DIR__ . '/../Controllers/KategoriMontir.php';
 $dataMontir = $montir->index();
 $dataKategori = $kategori_montir->index();
 
-include_once(__DIR__ . '/../Layouts/navbar.php'); ?>
+include_once __DIR__ . '/../Layouts/navbar.php'; ?>
 
 <link rel="stylesheet" href="../assets/adminlte/css/adminlte.min.css">
 <script src="../assets/adminlte/js/adminlte.min.js"></script>
@@ -32,7 +35,6 @@ include_once(__DIR__ . '/../Layouts/navbar.php'); ?>
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1 class="m-0">Data Montir</h1>
->>>>>>> 40c4eabdec7d5d645f404c5b5b48bd85b22d6eec
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
