@@ -1,4 +1,22 @@
 <?php
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+require_once 'Controllers/Montir.php';
+$data = $montir->index();
+?>
+<div class="container">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tambah Data Montir</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+=======
+=======
+>>>>>>> b6ae2a45bd7df156d9c1ce7da7c84924a1000376
 require_once __DIR__ . '/../Controllers/Montir.php';
 require_once __DIR__ . '/../Controllers/KategoriMontir.php';
 

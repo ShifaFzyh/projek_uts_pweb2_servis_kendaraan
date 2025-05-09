@@ -200,6 +200,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+>>>>>>> b6ae2a45bd7df156d9c1ce7da7c84924a1000376
                     <a href="?url=login" class="nav-link <?php if($file == 'login') echo 'active' ?>">
                     <a href="?url=dbservis\templates\examples\login.html" class="nav-link <?php if($file == 'dbservis\templates\examples\login.html') echo 'active' ?>">
                         <i class="nav-icon fas fa-user"></i>
@@ -210,6 +215,11 @@
                 </li>
                 <li class="nav-item">
                     <a href="?url=montir" class="nav-link <?php if($file == 'montir') echo 'active' ?>">
+=======
+                    <a href="?url=montir
+                    " class="nav-link <?php if($file == 'montir
+                    ') echo 'active' ?>">
+>>>>>>> Stashed changes
                         <i class="nav-icon fas fa-user"></i>
                         <p>
                            Montir
