@@ -210,7 +210,6 @@
                 </li>
                 <li class="nav-item">
                     <a href="?url=montir" class="nav-link <?php if($file == 'montir') echo 'active' ?>">
-=======
                     <a href="?url=montir
                     " class="nav-link <?php if($file == 'montir
                     ') echo 'active' ?>">
