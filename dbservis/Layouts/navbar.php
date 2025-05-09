@@ -209,12 +209,6 @@
                 </li>
                 <li class="nav-item">
                     <a href="?url=montir" class="nav-link <?php if($file == 'montir') echo 'active' ?>">
-                    <a href="?url=montir
-                    " class="nav-link <?php if($file == 'montir
-                    ') echo 'active' ?>">
-                    <a href="?url=montir
-                    " class="nav-link <?php if($file == 'montir
-                    ') echo 'active' ?>">
                         <i class="nav-icon fas fa-user"></i>
                         <p>
                            Montir
