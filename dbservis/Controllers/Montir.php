@@ -1,5 +1,5 @@
 <?php
-require_once _DIR_ . '/../Config/DB.php';
+require_once __DIR__ . '/../Config/DB.php';
 
 class Montir
 {

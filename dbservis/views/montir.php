@@ -1,12 +1,12 @@
 <?php
-require_once _DIR_ . '/../Controllers/Montir.php';
-require_once _DIR_ . '/../Controllers/KategoriMontir.php';
+require_once __DIR__ . '/../Controllers/Montir.php';
+require_once __DIR__ . '/../Controllers/KategoriMontir.php';
 
 // Ambil data montir dan kategori montir
 $dataMontir = $montir->index();
 $dataKategori = $kategori_montir->index();
 
-include_once(_DIR_ . '/../Layouts/navbar.php'); ?>
+include_once __DIR__ . '/../Layouts/navbar.php'; ?>
 
 <link rel="stylesheet" href="../assets/adminlte/css/adminlte.min.css">
 <script src="../assets/adminlte/js/adminlte.min.js"></script>
