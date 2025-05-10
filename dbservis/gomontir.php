@@ -21,6 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="./gomontir_files/css2" rel="stylesheet">
 <link rel="stylesheet" href="./gomontir_files/all.min.css">
+<link rel="stylesheet" href="./gomontir_files/css1.css">
 <link rel="stylesheet" href="./gomontir_files/feather.css">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
@@ -30,6 +31,9 @@
 <link rel="stylesheet" href="./gomontir_files/theme.min.css">
  <!-- Analytics Code -->
 <script async="" src="./gomontir_files/js"></script>
+<link rel="stylesheet" href="./gomontir_files/theme-min.css">
+ <!-- Analytics Code -->
+<script async="" src="./gomontir_files/js.js"></script>
 <script>
    window.dataLayer = window.dataLayer || [];
    function gtag() {
@@ -72,6 +76,15 @@
 						</ul>
 						<div class="header-btn">
 							<a href="http://localhost/projek_uts_pweb2_servis_kendaraan/dbservis/gomontir.php#" class="btn btn-primary rounded-pill" target="_blank">Book Services</a>
+							<li class="nav-item">
+								<a class="nav-link" href="#features">Docs</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#review">Review</a>
+							</li>
+						</ul>
+						<div class="header-btn">
+							<a href="http://localhost/projek_uts_pweb2_servis_kendaraan/dbservis/index.php?url=login" class="btn btn-primary rounded-pill">Login</a>
 						</div>
 					</div>
 				</div>
@@ -93,6 +106,14 @@
 								</div>
 								<div>
 									<a href="https://bit.ly/coach-ui" class="btn btn-primary rounded-pill" target="_blank">Book Services</a>
+									<h1 id="depan" class="text-white mb-3 display-5 fw-bold">
+										Layanan Servis Kendaraan Terpercaya
+										<span class="text-danger">.</span>
+									</h1>
+									<p class="mb-0 lead">Bengkel online Go Montir siap membantu Anda melakukan perawatan dan perbaikan mobil dengan cepat, mudah, dan profesional.</p>
+								</div>
+								<div>
+									<a href="#LayananKami" class="btn btn-primary rounded-pill">Layanan Kami</a>
 								</div>
 								<div class="d-flex flex-row gap-1 justify-content-center justify-content-md-start">
 									<div class="me-2 text-warning">
@@ -134,6 +155,8 @@
 							<div class="text-center mb-8">
 								<span class="border border-primary rounded-pill text-primary px-3 py-1 fw-semibold">Homepages</span>
 								<h2 class="mb-0 mt-4">Layanan Kami</h2>
+							<div id="LayananKami" class="text-center mb-8">
+								<h2>Layanan Kami</h2>
 							</div>
 						</div>
 					</div>
@@ -145,6 +168,36 @@
 								</a>
 								<h3 class="h4 mb-0">Kendaraan Ringan</h3>
 							</div>
+					<!-- Gambar 1 -->
+					<div class="col-lg-4 col-md-6 col-12">
+						<div class="d-flex flex-column gap-4 align-items-center">
+						<a href="http://localhost/projek_uts_pweb2_servis_kendaraan/dbservis/gomontir">
+							<img src="./gomontir_files/montir 1.jpg" alt="img" class="img-hover rounded-4 img-fluid">
+						</a>
+						<h3 class="h5 mb-0">Servis Kendaraan Ringan</h3>
+						</div>
+					</div>
+
+					<!-- Gambar 2 -->
+					<div class="col-lg-4 col-md-6 col-12">
+						<div class="d-flex flex-column gap-4 align-items-center">
+						<a href="#">
+							<img src="./gomontir_files/montir 3.jpg" alt="img" class="img-hover rounded-4 img-fluid">
+						</a>
+						<h3 class="h5 mb-0">Ganti Oli & Tune Up</h3>
+						</div>
+					</div>
+
+					<!-- Gambar 3 -->
+					<div class="col-lg-4 col-md-6 col-12">
+						<div class="d-flex flex-column gap-4 align-items-center">
+						<a href="#">
+							<img src="./gomontir_files/montir 2.jpg" alt="img" class="img-hover rounded-4 img-fluid">
+						</a>
+						<h3 class="h5 mb-0">Perbaikan Mesin</h3>
+						</div>
+					</div>
+					</div>
 						</div>
 					</div>
 				</div>
@@ -158,6 +211,9 @@
 							<div class="text-center mb-8">
 								<span class="border border-primary rounded-pill text-primary px-3 py-1 fw-semibold">Features</span>
 								<h2 class="mt-4 mb-8">More Coach theme Features</h2>
+								<a href="#features" class="btn btn-primary">Features</a>
+   
+								<h2 id="features" class="mt-4 mb-8">More GoMontir Service Features</h2>
 							</div>
 						</div>
 					</div>
@@ -172,6 +228,11 @@
 								<div>
 									<h3 class="h4">Built with Bootstrap 5</h3>
 									<p class="mb-0">Coach is the powerful front-end solution based on Bootstrap 5 —Powerful, extensible, and feature-packed frontend toolkit.</p>
+									</svg>
+								</div>
+								<div>
+									<h3 class="h4">Ganti oli berkala</h3>
+									<p class="mb-0">Kami menyediakan layanan ganti oli berkualitas tinggi untuk menjaga performa mesin kendaraan Anda tetap optimal dan awet.</p>
 								</div>
 							</div>
 						</div>
@@ -192,6 +253,8 @@
 								<div>
 									<h3 class="h4">Easy to Customize with Sass</h3>
 									<p class="mb-0">Coach is built using Sass. Easily change colors, typography, and much more. It is the most mature, stable, and powerful CSS extension language in the world.</p>
+									<h3 class="h4">Servis Mesin Lengkap</h3>
+									<p class="mb-0">Layanan perbaikan dan perawatan mesin menyeluruh oleh montir profesional, termasuk tune-up dan pemeriksaan menyeluruh.</p>
 								</div>
 							</div>
 						</div>
@@ -199,13 +262,6 @@
 							<div>
 								<div class="mb-4">
 									<svg xmlns="http://www.w3.org/2000/svg" width="23" height="32" viewBox="0 0 23 32" fill="none">
-										<g clip-path="url(#clip0_3114_2301)">
-											<path d="M2.06294 29.4286L0 6.28955H22.6688L20.6036 29.4249L11.3205 31.9985L2.06294 29.4286Z" fill="#672EBB"></path>
-											<path d="M11.3344 30.0315L18.8356 27.9519L20.6004 8.18164H11.3344V30.0315Z" fill="#672EBB"></path>
-											<path d="M11.3344 16.7635H7.57909L7.31974 13.8575H11.3344V11.0195H4.21826L4.28619 11.7809L4.98369 19.6014H11.3344V16.7635ZM11.3344 24.1339L11.322 24.1372L8.16135 23.2838L7.9593 21.0204H5.11049L5.50808 25.4763L11.3213 27.0901L11.3344 27.0865V24.1339Z" fill="#EBEBEB"></path>
-											<path d="M2.10907 0.00146484H3.55125V1.42634H4.87051V0.00146484H6.31276V4.31633H4.87057V2.87146H3.55132V4.31633H2.10919V0.00146484H2.10907ZM8.20928 1.43234H6.9397V0.00146484H10.9218V1.43234H9.65165V4.31633H8.2094L8.20928 1.43234ZM11.5538 0.00146484H13.0575L13.9826 1.51758L14.9067 0.00146484H16.4111V4.31633H14.9749V2.17765L13.9826 3.71182H13.9579L12.9649 2.17765V4.31633H11.5539V0.00146484H11.5538ZM17.1289 0.00146484H18.5715V2.89008H20.5996V4.31633H17.1289V0.00146484Z" fill="#672EBB"></path>
-											<path d="M11.3246 16.7635V19.6014H14.8191L14.4897 23.2819L11.3246 24.1362V27.0887L17.1424 25.4763L17.1851 24.9969L17.852 17.5256L17.9212 16.7635H17.1565H11.3246ZM11.3246 11.0195V13.8575H18.1795L18.2364 13.2196L18.3657 11.7809L18.4336 11.0195H11.3246Z" fill="white"></path>
-										</g>
 										<defs>
 											<clippath id="clip0_3114_2301">
 												<rect width="22.6688" height="32" fill="white"></rect>
@@ -214,10 +270,20 @@
 									</svg>
 								</div>
 								<div>
-									<h3 class="h4">W3C Valid HTML Code</h3>
+									<h3 class="h4">Pemeriksaan Sistem Rem</h3>
 									<p class="mb-0">
-										All HTML files are checked via the W3C validator to ensure 100% valid code. As you probably know invalid HTML limits innovation, but Coach is innovative at its core.
-									</p>
+										Rem Anda dicek dan diservis dengan standar keamanan tinggi, termasuk penggantian kampas rem bila diperlukan.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<div>
+								<div class="mb-4">
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"></svg>
+								</div>
+								<div>
+									<h3 class="h4">Booking Online Mudah</h3>
+									<p class="mb-0">Pesan layanan bengkel langsung dari aplikasi atau website GoMontir tanpa harus antre di bengkel.</p>
 								</div>
 							</div>
 						</div>
@@ -225,13 +291,11 @@
 							<div>
 								<div class="mb-4">
 									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-										<path opacity="0.2" d="M26 6V27C26 27.2652 25.8946 27.5196 25.7071 27.7071C25.5196 27.8946 25.2652 28 25 28H7C6.73478 28 6.48043 27.8946 6.29289 27.7071C6.10536 27.5196 6 27.2652 6 27V6C6 5.73478 6.10536 5.48043 6.29289 5.29289C6.48043 5.10536 6.73478 5 7 5H12C11.3495 5.86476 10.9985 6.9179 11 8V9H21V8C21.0015 6.9179 20.6505 5.86476 20 5H25C25.2652 5 25.5196 5.10536 25.7071 5.29289C25.8946 5.48043 26 5.73478 26 6Z" fill="#672EBB"></path>
-										<path d="M21 19.0001C21 19.2653 20.8946 19.5196 20.7071 19.7072C20.5196 19.8947 20.2652 20.0001 20 20.0001H12C11.7348 20.0001 11.4804 19.8947 11.2929 19.7072C11.1054 19.5196 11 19.2653 11 19.0001C11 18.7348 11.1054 18.4805 11.2929 18.293C11.4804 18.1054 11.7348 18.0001 12 18.0001H20C20.2652 18.0001 20.5196 18.1054 20.7071 18.293C20.8946 18.4805 21 18.7348 21 19.0001ZM20 14.0001H12C11.7348 14.0001 11.4804 14.1054 11.2929 14.293C11.1054 14.4805 11 14.7348 11 15.0001C11 15.2653 11.1054 15.5196 11.2929 15.7072C11.4804 15.8947 11.7348 16.0001 12 16.0001H20C20.2652 16.0001 20.5196 15.8947 20.7071 15.7072C20.8946 15.5196 21 15.2653 21 15.0001C21 14.7348 20.8946 14.4805 20.7071 14.293C20.5196 14.1054 20.2652 14.0001 20 14.0001ZM27 6.00006V27.0001C27 27.5305 26.7893 28.0392 26.4142 28.4143C26.0391 28.7893 25.5304 29.0001 25 29.0001H7C6.46957 29.0001 5.96086 28.7893 5.58579 28.4143C5.21071 28.0392 5 27.5305 5 27.0001V6.00006C5 5.46963 5.21071 4.96092 5.58579 4.58585C5.96086 4.21078 6.46957 4.00006 7 4.00006H11.5325C12.0944 3.37097 12.7828 2.86763 13.5527 2.52301C14.3225 2.17839 15.1565 2.00024 16 2.00024C16.8435 2.00024 17.6775 2.17839 18.4473 2.52301C19.2172 2.86763 19.9056 3.37097 20.4675 4.00006H25C25.5304 4.00006 26.0391 4.21078 26.4142 4.58585C26.7893 4.96092 27 5.46963 27 6.00006ZM12 8.00006H20C20 6.9392 19.5786 5.92178 18.8284 5.17164C18.0783 4.42149 17.0609 4.00006 16 4.00006C14.9391 4.00006 13.9217 4.42149 13.1716 5.17164C12.4214 5.92178 12 6.9392 12 8.00006ZM25 6.00006H21.6562C21.8837 6.64233 22 7.3187 22 8.00006V9.00006C22 9.26528 21.8946 9.51963 21.7071 9.70717C21.5196 9.89471 21.2652 10.0001 21 10.0001H11C10.7348 10.0001 10.4804 9.89471 10.2929 9.70717C10.1054 9.51963 10 9.26528 10 9.00006V8.00006C10 7.3187 10.1163 6.64233 10.3438 6.00006H7V27.0001H25V6.00006Z" fill="#672EBB"></path>
 									</svg>
 								</div>
 								<div>
-									<h3 class="h4">Extensive Docs</h3>
-									<p class="mb-0">Coach theme documentation helps developers, It has a theme installation workflow and how to use it for your purpose and easy copy and paste snippets.</p>
+									<h3 class="h4">Suku Cadangan Asli Bergaransi</h3>
+									<p class="mb-0">Gunakan hanya suku cadang asli berkualitas tinggi dengan garansi untuk setiap penggantian..</p>
 								</div>
 							</div>
 						</div>
@@ -239,13 +303,11 @@
 							<div>
 								<div class="mb-4">
 									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-										<path opacity="0.2" d="M25 8V10H22C21.4696 10 20.9609 10.2107 20.5858 10.5858C20.2107 10.9609 20 11.4696 20 12V22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H23C23.5304 6 24.0391 6.21071 24.4142 6.58579C24.7893 6.96086 25 7.46957 25 8Z" fill="#672EBB"></path>
-										<path d="M28 9H26V8C26 7.20435 25.6839 6.44129 25.1213 5.87868C24.5587 5.31607 23.7956 5 23 5H5C4.20435 5 3.44129 5.31607 2.87868 5.87868C2.31607 6.44129 2 7.20435 2 8V20C2 20.7956 2.31607 21.5587 2.87868 22.1213C3.44129 22.6839 4.20435 23 5 23H19V24C19 24.7956 19.3161 25.5587 19.8787 26.1213C20.4413 26.6839 21.2044 27 22 27H28C28.7956 27 29.5587 26.6839 30.1213 26.1213C30.6839 25.5587 31 24.7956 31 24V12C31 11.2044 30.6839 10.4413 30.1213 9.87868C29.5587 9.31607 28.7956 9 28 9ZM5 21C4.73478 21 4.48043 20.8946 4.29289 20.7071C4.10536 20.5196 4 20.2652 4 20V8C4 7.73478 4.10536 7.48043 4.29289 7.29289C4.48043 7.10536 4.73478 7 5 7H23C23.2652 7 23.5196 7.10536 23.7071 7.29289C23.8946 7.48043 24 7.73478 24 8V9H22C21.2044 9 20.4413 9.31607 19.8787 9.87868C19.3161 10.4413 19 11.2044 19 12V21H5ZM29 24C29 24.2652 28.8946 24.5196 28.7071 24.7071C28.5196 24.8946 28.2652 25 28 25H22C21.7348 25 21.4804 24.8946 21.2929 24.7071C21.1054 24.5196 21 24.2652 21 24V12C21 11.7348 21.1054 11.4804 21.2929 11.2929C21.4804 11.1054 21.7348 11 22 11H28C28.2652 11 28.5196 11.1054 28.7071 11.2929C28.8946 11.4804 29 11.7348 29 12V24ZM17 26C17 26.2652 16.8946 26.5196 16.7071 26.7071C16.5196 26.8946 16.2652 27 16 27H11C10.7348 27 10.4804 26.8946 10.2929 26.7071C10.1054 26.5196 10 26.2652 10 26C10 25.7348 10.1054 25.4804 10.2929 25.2929C10.4804 25.1054 10.7348 25 11 25H16C16.2652 25 16.5196 25.1054 16.7071 25.2929C16.8946 25.4804 17 25.7348 17 26ZM27 14C27 14.2652 26.8946 14.5196 26.7071 14.7071C26.5196 14.8946 26.2652 15 26 15H24C23.7348 15 23.4804 14.8946 23.2929 14.7071C23.1054 14.5196 23 14.2652 23 14C23 13.7348 23.1054 13.4804 23.2929 13.2929C23.4804 13.1054 23.7348 13 24 13H26C26.2652 13 26.5196 13.1054 26.7071 13.2929C26.8946 13.4804 27 13.7348 27 14Z" fill="#672EBB"></path>
 									</svg>
 								</div>
 								<div>
-									<h3 class="h4">Mobile friendly website</h3>
-									<p class="mb-0">Coach is Mobile friendly, Designing websites to be mobile friendly ensures that your pages perform well on all devices.</p>
+									<h3 class="h4">Panduan Tips Otomotif</h3>
+									<p class="mb-0">Kami menyediakan panduan perawatan kendaraan dan tips berkendara agar Anda tetap aman dan nyaman di jalan.</p>
 								</div>
 							</div>
 						</div>
@@ -253,28 +315,12 @@
 							<div>
 								<div class="mb-4">
 									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-										<path opacity="0.2" d="M11 25.0001V16.8588L16.5462 21.7226L12.72 25.6926C12.5817 25.836 12.4038 25.9349 12.209 25.9765C12.0141 26.0182 11.8113 26.0006 11.6265 25.9262C11.4417 25.8518 11.2833 25.7239 11.1717 25.5589C11.0601 25.3939 11.0003 25.1993 11 25.0001ZM28.8287 4.00883L3.5 13.9226C3.34274 13.9831 3.20935 14.093 3.11986 14.2358C3.03038 14.3786 2.98962 14.5465 3.0037 14.7145C3.01779 14.8824 3.08596 15.0412 3.19799 15.1671C3.31002 15.293 3.45985 15.3791 3.625 15.4126L11 16.8588L29 4.15258C29.0054 4.13 29.0044 4.10637 28.9971 4.08433C28.9898 4.06229 28.9766 4.04272 28.9588 4.02779C28.941 4.01287 28.9194 4.00319 28.8965 3.99984C28.8735 3.99649 28.85 3.9996 28.8287 4.00883Z" fill="#672EBB"></path>
-										<path d="M29.61 3.27376C29.4551 3.13997 29.2666 3.051 29.0648 3.01641C28.863 2.98183 28.6557 3.00296 28.465 3.07751L3.13251 12.9913C2.77349 13.1309 2.46954 13.3833 2.26642 13.7106C2.06329 14.0379 1.97199 14.4224 2.00625 14.806C2.04052 15.1897 2.1985 15.5519 2.4564 15.838C2.71431 16.1241 3.05819 16.3187 3.43626 16.3925L10 17.6813V25C9.99872 25.3987 10.1172 25.7885 10.3401 26.119C10.5629 26.4496 10.8799 26.7055 11.25 26.8538C11.6195 27.0046 12.0258 27.0409 12.4162 26.9577C12.8065 26.8746 13.1628 26.6759 13.4388 26.3875L16.6038 23.105L21.625 27.5C21.9873 27.8213 22.4545 27.9992 22.9388 28C23.151 27.9998 23.3618 27.9665 23.5638 27.9013C23.8937 27.7966 24.1904 27.6073 24.4245 27.3522C24.6585 27.0971 24.8216 26.7852 24.8975 26.4475L29.9713 4.37501C30.0166 4.17595 30.007 3.96829 29.9434 3.77429C29.8797 3.58029 29.7645 3.40727 29.61 3.27376ZM21.9675 7.77376L10.7688 15.7938L4.56751 14.5775L21.9675 7.77376ZM12 25V19.065L15.0988 21.7825L12 25ZM22.9413 26L12.6063 16.9375L27.4813 6.27626L22.9413 26Z" fill="#672EBB"></path>
 									</svg>
 								</div>
 								<div>
-									<h3 class="h4">Kick-Start Your Development</h3>
-									<p class="mb-0">Full task automation. Start your development process fast and easy with Node.js and Gulp setup. Configuration files are included.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6">
-							<div>
-								<div class="mb-4">
-									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-										<path opacity="0.2" d="M24.485 24.4849L19.535 19.5349C20.4724 18.5973 20.9989 17.3257 20.9989 15.9999C20.9989 14.6741 20.4724 13.4025 19.535 12.4649L24.485 7.51489C26.7353 9.76531 27.9994 12.8174 27.9994 15.9999C27.9994 19.1824 26.7353 22.2345 24.485 24.4849ZM7.515 7.51489C5.26474 9.76531 4.00056 12.8174 4.00056 15.9999C4.00056 19.1824 5.26474 22.2345 7.515 24.4849L12.465 19.5349C11.5276 18.5973 11.0011 17.3257 11.0011 15.9999C11.0011 14.6741 11.5276 13.4025 12.465 12.4649L7.515 7.51489Z" fill="#672EBB"></path>
-										<path d="M16 3C13.4288 3 10.9154 3.76244 8.77759 5.1909C6.63975 6.61935 4.97351 8.64968 3.98957 11.0251C3.00563 13.4006 2.74819 16.0144 3.2498 18.5362C3.75141 21.0579 4.98953 23.3743 6.80762 25.1924C8.6257 27.0105 10.9421 28.2486 13.4638 28.7502C15.9856 29.2518 18.5995 28.9944 20.9749 28.0104C23.3503 27.0265 25.3807 25.3603 26.8091 23.2224C28.2376 21.0846 29 18.5712 29 16C28.9964 12.5533 27.6256 9.24882 25.1884 6.81163C22.7512 4.37445 19.4467 3.00364 16 3ZM20.8875 19.4737C21.611 18.4599 21.9999 17.2455 21.9999 16C21.9999 14.7545 21.611 13.5401 20.8875 12.5262L24.45 8.965C26.0976 10.939 27.0001 13.4287 27.0001 16C27.0001 18.5713 26.0976 21.061 24.45 23.035L20.8875 19.4737ZM12 16C12 15.2089 12.2346 14.4355 12.6741 13.7777C13.1137 13.1199 13.7384 12.6072 14.4693 12.3045C15.2002 12.0017 16.0044 11.9225 16.7804 12.0769C17.5563 12.2312 18.269 12.6122 18.8284 13.1716C19.3878 13.731 19.7688 14.4437 19.9231 15.2196C20.0775 15.9956 19.9983 16.7998 19.6955 17.5307C19.3928 18.2616 18.8801 18.8864 18.2223 19.3259C17.5645 19.7654 16.7911 20 16 20C14.9391 20 13.9217 19.5786 13.1716 18.8284C12.4214 18.0783 12 17.0609 12 16ZM23.035 7.55L19.4738 11.1125C18.4599 10.389 17.2455 10.0001 16 10.0001C14.7545 10.0001 13.5401 10.389 12.5263 11.1125L8.96501 7.55C10.939 5.90237 13.4287 4.99988 16 4.99988C18.5713 4.99988 21.061 5.90237 23.035 7.55ZM7.55001 8.965L11.1125 12.5262C10.389 13.5401 10.0001 14.7545 10.0001 16C10.0001 17.2455 10.389 18.4599 11.1125 19.4737L7.55001 23.035C5.90238 21.061 4.99988 18.5713 4.99988 16C4.99988 13.4287 5.90238 10.939 7.55001 8.965ZM8.96501 24.45L12.5263 20.8875C13.5401 21.611 14.7545 21.9999 16 21.9999C17.2455 21.9999 18.4599 21.611 19.4738 20.8875L23.035 24.45C21.061 26.0976 18.5713 27.0001 16 27.0001C13.4287 27.0001 10.939 26.0976 8.96501 24.45Z" fill="#672EBB"></path>
-									</svg>
-								</div>
-								<div>
-									<h3 class="h4">Active Support</h3>
+									<h3 class="h4">Respons Cepat via CS</h3>
 									<p class="mb-0">
-										Our support team helps you solve any issues you have in working with Coach them. To get help from our team,
+										Tim customer service kami siap membantu Anda 24/7 untuk konsultasi, pemesanan, dan keluhan teknis.
 										<a href="https://codescandy.com/coach/bootstrap-5/landing-preview.html#!" class="text-secondary">Contact us</a>
 										.
 									</p>
@@ -291,8 +337,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="text-center mb-8">
-								<span class="border border-primary rounded-pill text-primary px-3 py-1 fw-semibold">Reviews</span>
-								<h2 class="mt-4">Customer Reviews</h2>
+								<h2 id="review" class="mt-4">Customer Reviews</h2>
 							</div>
 						</div>
 					</div>
@@ -319,13 +364,13 @@
 								<div>
 									<h3 class="h4">Great theme. Prompt and helpful support.</h3>
 									<p class="mb-0">
-										A great theme that is very clean and versatile. Works for many site categories (not just coaches, motivational speakers, or online courses). Support was very prompt and helpful
-										with my inquiry.
+										Cepat dan Responsif!
+										Customer service-nya tanggap dan cepat membantu saat saya butuh montir dadakan. Sangat memuaskan!
 									</p>
 								</div>
 								<div>
-									<h4 class="mb-0">Josh</h4>
-									<span class="fs-6">Bootstrap Customer</span>
+									<h4 class="mb-0">Susi</h4>
+									<span class="fs-6">Saya bingung soal kerusakan motor, tapi CS GoMontir langsung bantu arahkan dan beri solusi tepat. Mantap!</span>
 								</div>
 							</div>
 						</div>
@@ -350,14 +395,13 @@
 								</div>
 								<div>
 									<h3 class="h4">Thank you for great personalized support.</h3>
-									<p class="mb-0">
-										Thank you, Codescandy. You helped a node/npm/js/gulp neophyte get up and going. You have built a wonderful theme. I'm just dipping in and looking forward to the fun.I'm sure as I
-										understand a bit more, it will even be more fun. Thanks again.
-									</p>
+									<p class="mb-0"> Pelayanan Ramah
+CS-nya sopan dan menjelaskan semua proses dengan jelas. Hanya saja montir agak terlambat datang.</p>
 								</div>
 								<div>
-									<h4 class="mb-0">Maureen</h4>
-									<span class="fs-6">Bootstrap Customer</span>
+									<h4 class="mb-0">Ahmad</h4>
+									<span class="fs-6">Proses Mudah
+Dari tanya-tanya sampai montir datang, semua dibantu CS dengan baik. Praktis dan hemat waktu.r</span>
 								</div>
 							</div>
 						</div>
@@ -372,11 +416,12 @@
 						<div class="col-lg-6 col-xxl-5 col-md-8">
 							<div class="text-center">
 								<h2 class="text-white mb-3 display-6 fw-semibold">
-									Exclusive Website Templates for Coaches
+									Layanan Servis Kendaraan Terpercaya
 									<span class="text-danger">.</span>
 								</h2>
-								<p class="mb-5 lead">Our premium coaching website templates help you create an impactful online presence by launching your dream website within no time.</p>
-								<a href="https://bit.ly/coach-ui" class="btn btn-primary rounded-pill" target="_blank">Book Services</a>
+								<p class="mb-5 lead">Sangat Membantu
+Saya bingung soal kerusakan motor, tapi CS GoMontir langsung bantu arahkan dan beri solusi tepat. Mantap!.</p>
+								<a class="btn btn-primary rounded-pill">Book Services</a>
 							</div>
 						</div>
 					</div>
@@ -389,12 +434,12 @@
 				<div class="row d-flex align-items-center">
 					<div class="col-md-6">
 						<div class="mb-3 mb-md-0">
-							<span>©2024 GoMontir</span>
+							<span>©2025 GoMontir</span>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="text-md-end">
-							<a href="https://discord.gg/Mfu3t6ENXx" target="_blank" rel="nofollow" class="text-white-50 me-3">Join Discord</a>
+							<a href="https://discord.gg/Mfu3t6ENXx" target="_blank" rel="nofollow" class="text-white-50 me-3">Join Now</a>
 							<a href="https://codescandy.com/" class="text-white-50" target="_blank">Contact Us</a>
 						</div>
 					</div>

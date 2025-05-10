@@ -2,7 +2,7 @@
 require_once('Controllers/Page.php');
 
 if (!isset($_GET['url'])) {
-    header("Location: ?url=layanan"); // Ubah default ke layanan
+    header("Location: ?url=home"); // Ubah default ke home
     exit();
 }
 
@@ -17,12 +17,11 @@ if ($file === 'layanan') {
 } elseif ($file === 'login') {
     require_once 'login.php';
     exit();
-} elseif ($file === 'landing') {
-    require_once 'landing.php';
+} elseif ($file === 'gomontir') {
+    require_once 'gomontir.php';
     exit();
 }
 
 $title = strtoupper($file);
 $home = new Page("$title", "$file");
 $home->call();
-
