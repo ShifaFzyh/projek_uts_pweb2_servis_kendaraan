@@ -17,8 +17,8 @@ if ($file === 'layanan') {
 } elseif ($file === 'login') {
     require_once 'login.php';
     exit();
-} elseif ($file === 'landing') {
-    require_once 'landing.php';
+} elseif ($file === 'gomontir') {
+    require_once 'gomontir.php';
     exit();
 }
 
