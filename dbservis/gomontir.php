@@ -67,7 +67,7 @@
 							</li>
 						</ul>
 						<div class="header-btn">
-							<a href="http://localhost/Pweb2/projek_uts_pweb2_servis_kendaraan/dbservis/index.php?url=login" class="btn btn-primary rounded-pill">Login</a>
+							<a href="http://localhost/projek_uts_pweb2_servis_kendaraan/dbservis/index.php?url=login" class="btn btn-primary rounded-pill">Login</a>
 						</div>
 					</div>
 				</div>
@@ -88,7 +88,7 @@
 									<p class="mb-0 lead">Bengkel online Go Montir siap membantu Anda melakukan perawatan dan perbaikan mobil dengan cepat, mudah, dan profesional.</p>
 								</div>
 								<div>
-									<a href="#LayananKami" class="btn btn-primary rounded-pill">Book Services</a>
+									<a href="#LayananKami" class="btn btn-primary rounded-pill">Layanan Kami</a>
 								</div>
 								<div class="d-flex flex-row gap-1 justify-content-center justify-content-md-start">
 									<div class="me-2 text-warning">
@@ -127,7 +127,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6 offset-lg-3 col-md-12 col-12">
-							<div class="text-center mb-8">
+							<div id="LayananKami" class="text-center mb-8">
 								<h2>Layanan Kami</h2>
 							</div>
 						</div>

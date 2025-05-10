@@ -2,7 +2,7 @@
 require_once('Controllers/Page.php');
 
 if (!isset($_GET['url'])) {
-    header("Location: ?url=layanan"); // Ubah default ke layanan
+    header("Location: ?url=home"); // Ubah default ke home
     exit();
 }
 
@@ -25,4 +25,3 @@ if ($file === 'layanan') {
 $title = strtoupper($file);
 $home = new Page("$title", "$file");
 $home->call();
-
